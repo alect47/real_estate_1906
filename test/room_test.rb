@@ -4,4 +4,16 @@ require './lib/room'
 
 class RoomTest < Minitest::Test
 
+  def test_it_exists
+    room = Room.new(:bedroom, 10, 13)
+
+    assert_instance_of Room, room
+  end
+
+  def test_it_has_category
+    room = Room.new(:bedroom, 10, 13)
+
+    assert_equal :bedroom, room.category
+  end
+
 end
